@@ -31,7 +31,6 @@ class CmsSlotBlockStorageRepository extends AbstractRepository implements CmsSlo
      */
     public function getCmsSlotBlockStorageTransfersByCmsSlotBlocks(array $cmsSlotBlockTransfers): array
     {
-        /** @var \Orm\Zed\CmsSlotBlock\Persistence\Base\SpyCmsSlotBlockQuery $cmsSlotBlockQuery */
         $cmsSlotBlockQuery = $this->getFactory()
             ->createCmsSlotBlockQuery()
             ->useCmsSlotQuery(null, Criteria::RIGHT_JOIN)
