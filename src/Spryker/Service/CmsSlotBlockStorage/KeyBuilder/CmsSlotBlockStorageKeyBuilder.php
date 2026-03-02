@@ -14,12 +14,6 @@ class CmsSlotBlockStorageKeyBuilder implements CmsSlotBlockStorageKeyBuilderInte
      */
     protected const FORMAT_SLOT_TEMPLATE_KEY = '%s:%s';
 
-    /**
-     * @param string $cmsSlotTemplatePath
-     * @param string $cmsSlotKey
-     *
-     * @return string
-     */
     public function generateSlotTemplateKey(string $cmsSlotTemplatePath, string $cmsSlotKey): string
     {
         return sprintf(

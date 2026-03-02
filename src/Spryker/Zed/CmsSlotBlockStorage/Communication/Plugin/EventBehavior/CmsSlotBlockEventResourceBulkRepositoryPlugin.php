@@ -77,12 +77,6 @@ class CmsSlotBlockEventResourceBulkRepositoryPlugin extends AbstractPlugin imple
         return SpyCmsSlotBlockTableMap::COL_ID_CMS_SLOT_BLOCK;
     }
 
-    /**
-     * @param int $offset
-     * @param int $limit
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCriteriaTransfer
-     */
     protected function createCmsSlotBlockCriteriaTransfer(int $offset, int $limit): CmsSlotBlockCriteriaTransfer
     {
         $filterTransfer = (new FilterTransfer())

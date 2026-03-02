@@ -43,9 +43,6 @@ class CmsSlotBlockStorageListenerTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -53,9 +50,6 @@ class CmsSlotBlockStorageListenerTest extends Unit
         $this->tester->addDependencies();
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockStoragePublishListener(): void
     {
         // Assign

@@ -21,33 +21,21 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class CmsSlotBlockStoragePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\CmsSlotBlockStorage\Persistence\SpyCmsSlotBlockStorageQuery
-     */
     public function createCmsSlotBlockStorageQuery(): SpyCmsSlotBlockStorageQuery
     {
         return SpyCmsSlotBlockStorageQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\CmsSlotBlock\Persistence\SpyCmsSlotBlockQuery
-     */
     public function createCmsSlotBlockQuery(): SpyCmsSlotBlockQuery
     {
         return SpyCmsSlotBlockQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockStorage\Persistence\Propel\Mapper\CmsSlotBlockStorageMapper
-     */
     public function createCmsSlotBlockStorageMapper(): CmsSlotBlockStorageMapper
     {
         return new CmsSlotBlockStorageMapper($this->getUtilEncodingService());
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockStorage\Dependency\Service\CmsSlotBlockStorageToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): CmsSlotBlockStorageToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::SERVICE_UTIL_ENCODING);

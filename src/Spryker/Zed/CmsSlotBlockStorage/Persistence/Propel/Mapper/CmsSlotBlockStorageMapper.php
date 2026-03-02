@@ -25,20 +25,11 @@ class CmsSlotBlockStorageMapper
      */
     protected $utilEncodingService;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotBlockStorage\Dependency\Service\CmsSlotBlockStorageToUtilEncodingServiceInterface $utilEncodingService
-     */
     public function __construct(CmsSlotBlockStorageToUtilEncodingServiceInterface $utilEncodingService)
     {
         $this->utilEncodingService = $utilEncodingService;
     }
 
-    /**
-     * @param \Orm\Zed\CmsSlotBlock\Persistence\SpyCmsSlotBlock $cmsSlotBlockEntity
-     * @param \Generated\Shared\Transfer\CmsSlotBlockTransfer $cmsSlotBlockTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockTransfer
-     */
     public function mapCmsSlotBlockEntityToCmsSlotBlockTransfer(
         SpyCmsSlotBlock $cmsSlotBlockEntity,
         CmsSlotBlockTransfer $cmsSlotBlockTransfer
@@ -57,12 +48,6 @@ class CmsSlotBlockStorageMapper
         return $cmsSlotBlockTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     * @param \Orm\Zed\CmsSlotBlockStorage\Persistence\SpyCmsSlotBlockStorage $cmsSlotBlockStorageEntity
-     *
-     * @return \Orm\Zed\CmsSlotBlockStorage\Persistence\SpyCmsSlotBlockStorage
-     */
     public function mapCmsSlotBlockStorageTransferToCmsSlotBlockStorageEntity(
         CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer,
         SpyCmsSlotBlockStorage $cmsSlotBlockStorageEntity
@@ -77,11 +62,6 @@ class CmsSlotBlockStorageMapper
         return $cmsSlotBlockStorageEntity;
     }
 
-    /**
-     * @param \Orm\Zed\CmsSlotBlockStorage\Persistence\SpyCmsSlotBlockStorage $cmsSlotBlockStorageEntity
-     *
-     * @return \Generated\Shared\Transfer\SynchronizationDataTransfer
-     */
     public function mapCmsSlotBlockStorageEntityToSynchronizationDataTransfer(
         SpyCmsSlotBlockStorage $cmsSlotBlockStorageEntity
     ): SynchronizationDataTransfer {
@@ -94,11 +74,6 @@ class CmsSlotBlockStorageMapper
         return $synchronizationDataTransfer;
     }
 
-    /**
-     * @param array $cmsSlotWithSlotTemplateCombination
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer
-     */
     public function mapCmsSlotWithTemplateCombinationToCmsSlotBlockStorageTransfer(
         array $cmsSlotWithSlotTemplateCombination
     ): CmsSlotBlockStorageTransfer {

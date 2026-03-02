@@ -19,9 +19,6 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
  */
 class CmsSlotBlockStorageCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockStorage\Dependency\Facade\CmsSlotBlockStorageToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): CmsSlotBlockStorageToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::FACADE_EVENT_BEHAVIOR);

@@ -33,11 +33,6 @@ class CmsSlotBlockStorageReader implements CmsSlotBlockStorageReaderInterface
      */
     protected $synchronizationService;
 
-    /**
-     * @param \Spryker\Client\CmsSlotBlockStorage\Dependency\Client\CmsSlotBlockStorageToStorageClientInterface $storageClient
-     * @param \Spryker\Service\CmsSlotBlockStorage\CmsSlotBlockStorageServiceInterface $cmsSlotBlockStorageService
-     * @param \Spryker\Client\CmsSlotBlockStorage\Dependency\Service\CmsSlotBlockStorageToSynchronizationServiceInterface $synchronizationService
-     */
     public function __construct(
         CmsSlotBlockStorageToStorageClientInterface $storageClient,
         CmsSlotBlockStorageServiceInterface $cmsSlotBlockStorageService,
@@ -48,12 +43,6 @@ class CmsSlotBlockStorageReader implements CmsSlotBlockStorageReaderInterface
         $this->synchronizationService = $synchronizationService;
     }
 
-    /**
-     * @param string $cmsSlotTemplatePath
-     * @param string $cmsSlotKey
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
-     */
     public function getCmsSlotBlockCollection(
         string $cmsSlotTemplatePath,
         string $cmsSlotKey
@@ -85,12 +74,6 @@ class CmsSlotBlockStorageReader implements CmsSlotBlockStorageReaderInterface
         return $cmsSlotBlockCollectionTransfer;
     }
 
-    /**
-     * @param string $cmsSlotTemplatePath
-     * @param string $cmsSlotKey
-     *
-     * @return string
-     */
     protected function generateStorageKey(string $cmsSlotTemplatePath, string $cmsSlotKey): string
     {
         $slotTemplateKey = $this->cmsSlotBlockStorageService->generateSlotTemplateKey($cmsSlotTemplatePath, $cmsSlotKey);

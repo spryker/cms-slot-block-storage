@@ -16,9 +16,6 @@ use Spryker\Service\CmsSlotBlockStorage\CmsSlotBlockStorageServiceInterface;
 
 class CmsSlotBlockStorageFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\CmsSlotBlockStorage\Storage\CmsSlotBlockStorageReaderInterface
-     */
     public function createCmsSlotBlockStorageReader(): CmsSlotBlockStorageReaderInterface
     {
         return new CmsSlotBlockStorageReader(
@@ -28,25 +25,16 @@ class CmsSlotBlockStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\CmsSlotBlockStorage\Dependency\Client\CmsSlotBlockStorageToStorageClientInterface
-     */
     public function getStorageClient(): CmsSlotBlockStorageToStorageClientInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::CLIENT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Service\CmsSlotBlockStorage\CmsSlotBlockStorageServiceInterface
-     */
     public function getCmsSlotBlockStorageService(): CmsSlotBlockStorageServiceInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::SERVICE_CMS_SLOT_BLOCK_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Client\CmsSlotBlockStorage\Dependency\Service\CmsSlotBlockStorageToSynchronizationServiceInterface
-     */
     public function getSynchronizationService(): CmsSlotBlockStorageToSynchronizationServiceInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::SERVICE_SYNCHRONIZATION);

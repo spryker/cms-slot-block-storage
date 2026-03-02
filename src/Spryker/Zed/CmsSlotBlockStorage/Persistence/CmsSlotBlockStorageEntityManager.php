@@ -15,11 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class CmsSlotBlockStorageEntityManager extends AbstractEntityManager implements CmsSlotBlockStorageEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return void
-     */
     public function saveCmsSlotBlockStorage(CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer): void
     {
         $cmsSlotBlockStorageEntity = $this->getFactory()
@@ -40,11 +35,6 @@ class CmsSlotBlockStorageEntityManager extends AbstractEntityManager implements 
         $cmsSlotBlockStorageEntity->save();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return void
-     */
     public function deleteCmsSlotBlockStorage(
         CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
     ): void {

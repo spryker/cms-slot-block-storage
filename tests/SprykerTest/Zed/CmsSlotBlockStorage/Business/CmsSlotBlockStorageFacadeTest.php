@@ -34,9 +34,6 @@ class CmsSlotBlockStorageFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -44,9 +41,6 @@ class CmsSlotBlockStorageFacadeTest extends Unit
         $this->tester->addDependencies();
     }
 
-    /**
-     * @return void
-     */
     public function testGetSynchronizationDataTransfersByCmsSlotBlockStorageIdsReturnsCorrectNumberOfTransfers(): void
     {
         // Assign

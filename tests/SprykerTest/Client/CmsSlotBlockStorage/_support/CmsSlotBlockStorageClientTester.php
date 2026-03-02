@@ -28,9 +28,6 @@ class CmsSlotBlockStorageClientTester extends Actor
 {
     use _generated\CmsSlotBlockStorageClientTesterActions;
 
-    /**
-     * @return \Spryker\Client\CmsSlotBlockStorage\CmsSlotBlockStorageClientInterface
-     */
     public function getCmsSlotBlockStorageClient(): CmsSlotBlockStorageClientInterface
     {
         return $this->getLocator()

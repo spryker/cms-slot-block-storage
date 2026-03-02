@@ -43,11 +43,6 @@ class CmsSlotBlockStorageHelper extends Module
         return $cmsSlotBlockStorageEntityTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SpyCmsSlotToCmsSlotTemplateEntityTransfer $cmsSlotToCmsSlotTemplateEntityTransfer
-     *
-     * @return void
-     */
     public function haveCmsSlotToCmsSlotTemplateInDb(
         SpyCmsSlotToCmsSlotTemplateEntityTransfer $cmsSlotToCmsSlotTemplateEntityTransfer
     ): void {
@@ -56,18 +51,12 @@ class CmsSlotBlockStorageHelper extends Module
         $cmsSlotToCmsSlotTemplateEntity->save();
     }
 
-    /**
-     * @return void
-     */
     public function ensureCmsSlotBlockStorageTableIsEmpty(): void
     {
         $cmsSlotBlockStorageQuery = $this->getCmsSlotBlockStorageQuery();
         $cmsSlotBlockStorageQuery->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\CmsSlotBlockStorage\Persistence\SpyCmsSlotBlockStorageQuery
-     */
     public function getCmsSlotBlockStorageQuery(): SpyCmsSlotBlockStorageQuery
     {
         return SpyCmsSlotBlockStorageQuery::create();

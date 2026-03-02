@@ -13,9 +13,6 @@ use Spryker\Service\Kernel\AbstractServiceFactory;
 
 class CmsSlotBlockStorageServiceFactory extends AbstractServiceFactory
 {
-    /**
-     * @return \Spryker\Service\CmsSlotBlockStorage\KeyBuilder\CmsSlotBlockStorageKeyBuilderInterface
-     */
     public function createCmsSlotBlockStorageKeyBuilder(): CmsSlotBlockStorageKeyBuilderInterface
     {
         return new CmsSlotBlockStorageKeyBuilder();

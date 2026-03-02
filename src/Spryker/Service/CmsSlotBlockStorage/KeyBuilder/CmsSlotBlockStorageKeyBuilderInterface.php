@@ -9,11 +9,5 @@ namespace Spryker\Service\CmsSlotBlockStorage\KeyBuilder;
 
 interface CmsSlotBlockStorageKeyBuilderInterface
 {
-    /**
-     * @param string $cmsSlotTemplatePath
-     * @param string $cmsSlotKey
-     *
-     * @return string
-     */
     public function generateSlotTemplateKey(string $cmsSlotTemplatePath, string $cmsSlotKey): string;
 }

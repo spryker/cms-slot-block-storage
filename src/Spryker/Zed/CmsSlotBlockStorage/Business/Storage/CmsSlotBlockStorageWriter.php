@@ -29,11 +29,6 @@ class CmsSlotBlockStorageWriter implements CmsSlotBlockStorageWriterInterface
      */
     protected $cmsSlotBlockStorageService;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotBlockStorage\Persistence\CmsSlotBlockStorageRepositoryInterface $cmsSlotBlockStorageRepository
-     * @param \Spryker\Zed\CmsSlotBlockStorage\Persistence\CmsSlotBlockStorageEntityManagerInterface $cmsSlotBlockStorageEntityManager
-     * @param \Spryker\Service\CmsSlotBlockStorage\CmsSlotBlockStorageServiceInterface $cmsSlotBlockStorageService
-     */
     public function __construct(
         CmsSlotBlockStorageRepositoryInterface $cmsSlotBlockStorageRepository,
         CmsSlotBlockStorageEntityManagerInterface $cmsSlotBlockStorageEntityManager,
@@ -77,11 +72,6 @@ class CmsSlotBlockStorageWriter implements CmsSlotBlockStorageWriterInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return string
-     */
     protected function getCmsSlotBlockStorageKey(
         CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
     ): string {

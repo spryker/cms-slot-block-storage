@@ -11,18 +11,8 @@ use Generated\Shared\Transfer\CmsSlotBlockStorageTransfer;
 
 interface CmsSlotBlockStorageEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return void
-     */
     public function saveCmsSlotBlockStorage(CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return void
-     */
     public function deleteCmsSlotBlockStorage(
         CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
     ): void;

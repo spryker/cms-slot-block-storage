@@ -21,9 +21,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class CmsSlotBlockStorageBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockStorage\Business\Storage\CmsSlotBlockStorageWriterInterface
-     */
     public function createCmsSlotBlockStorageWriter(): CmsSlotBlockStorageWriterInterface
     {
         return new CmsSlotBlockStorageWriter(
@@ -33,17 +30,11 @@ class CmsSlotBlockStorageBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockStorage\Dependency\Facade\CmsSlotBlockStorageToCmsSlotBlockFacadeInterface
-     */
     public function getCmsSlotBlockFacade(): CmsSlotBlockStorageToCmsSlotBlockFacadeInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::FACADE_CMS_SLOT_BLOCK);
     }
 
-    /**
-     * @return \Spryker\Service\CmsSlotBlockStorage\CmsSlotBlockStorageServiceInterface
-     */
     public function getCmsSlotBlockStorageService(): CmsSlotBlockStorageServiceInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockStorageDependencyProvider::SERVICE_CMS_SLOT_BLOCK_STORAGE);

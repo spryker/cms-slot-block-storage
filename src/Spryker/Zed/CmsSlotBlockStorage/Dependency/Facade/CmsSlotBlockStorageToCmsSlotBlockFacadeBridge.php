@@ -25,11 +25,6 @@ class CmsSlotBlockStorageToCmsSlotBlockFacadeBridge implements CmsSlotBlockStora
         $this->cmsSlotBlockFacade = $cmsSlotBlockFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
-     */
     public function getCmsSlotBlockCollection(
         CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
     ): CmsSlotBlockCollectionTransfer {

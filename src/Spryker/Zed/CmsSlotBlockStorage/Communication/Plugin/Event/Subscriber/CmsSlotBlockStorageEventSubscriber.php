@@ -34,11 +34,6 @@ class CmsSlotBlockStorageEventSubscriber extends AbstractPlugin implements Event
         return $eventCollection;
     }
 
-    /**
-     * @param \Spryker\Zed\Event\Dependency\EventCollectionInterface $eventCollection
-     *
-     * @return void
-     */
     protected function addCmsSlotBlockPublishStorageListener(EventCollectionInterface $eventCollection): void
     {
         $eventCollection->addListenerQueued(CmsSlotBlockEvents::CMS_SLOT_BLOCK_PUBLISH, new CmsSlotBlockStoragePublishListener(), 0, null, $this->getConfig()->getEventQueueName());

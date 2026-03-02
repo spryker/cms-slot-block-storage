@@ -11,12 +11,6 @@ use Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer;
 
 interface CmsSlotBlockStorageReaderInterface
 {
-    /**
-     * @param string $cmsSlotTemplatePath
-     * @param string $cmsSlotKey
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
-     */
     public function getCmsSlotBlockCollection(
         string $cmsSlotTemplatePath,
         string $cmsSlotKey

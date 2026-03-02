@@ -44,9 +44,6 @@ class CmsSlotBlockStorageClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetCmsSlotBlockCollectionReturnsCmsSlotBlockCollectionTransferWithCorrectData(): void
     {
         // Arrange
@@ -68,9 +65,6 @@ class CmsSlotBlockStorageClientTest extends Unit
         $this->assertCount(1, $cmsSlotBlockCollectionTransfer->getCmsSlotBlocks());
     }
 
-    /**
-     * @return void
-     */
     public function testGetCmsSlotBlockCollectionReturnsEmptyCollectionWithIncorrectData(): void
     {
         // Arrange

@@ -37,9 +37,6 @@ class CmsSlotBlockStorageServiceTest extends Unit
      */
     protected const GENERATED_SLOT_TEMPLATE_KEY = '@Home/index/home.tpl:slt-1';
 
-    /**
-     * @return void
-     */
     public function testGenerateSlotTemplateKey(): void
     {
         $generatedSlotTemplateKey = $this->tester->getCmsSlotBlockStorageService()

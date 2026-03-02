@@ -31,11 +31,6 @@ interface CmsSlotBlockStorageRepositoryInterface
         array $cmsSlotBlockStorageIds
     ): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
-     */
     public function getCmsSlotBlockCollectionByCmsSlotBlockStorageTransfer(
         CmsSlotBlockStorageTransfer $cmsSlotBlockStorageTransfer
     ): CmsSlotBlockCollectionTransfer;
